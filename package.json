@@ -9,6 +9,12 @@
     "test": "jest",
     "precommit": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged",
+        "pre-push": "npm test"
+    }
+  },
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix",
